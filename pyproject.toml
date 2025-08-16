@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "backend-framework"
+version = "0.1.0"
+description = ""
+authors = ["Parham Mahdizade <parham@Parhams-MacBook-Air.local>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+fastapi = "^0.116.1"
+uvicorn = "^0.35.0"
+gunicorn = "^23.0.0"
+
+[tool.poetry.group.lint.dependencies]
+ruff = "^0.12.8"
+black = "^25.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
