@@ -562,6 +562,38 @@ files = [
 typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
 
 [[package]]
+name = "pydentic"
+version = "0.0.1.dev3"
+description = "Pydantic Identifiers"
+optional = false
+python-versions = ">=3.6.1"
+files = [
+    {file = "pydentic-0.0.1.dev3-py3-none-any.whl", hash = "sha256:b37f690f262e02e781deae8588a411c596489bc2837701fbb5e8c59b31b4236e"},
+    {file = "pydentic-0.0.1.dev3.tar.gz", hash = "sha256:4c5ee9c260e3cbcdb2a2d725b1d98046cb2b5298e6d6154449a685cf4cca85ec"},
+]
+
+[package.dependencies]
+python-stdnum = ">=1.16"
+
+[package.extras]
+dev = ["flake8"]
+test = ["pydantic", "pytest"]
+
+[[package]]
+name = "python-stdnum"
+version = "2.1"
+description = "Python module to handle standardized numbers and codes"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "python_stdnum-2.1-py3-none-any.whl", hash = "sha256:25eabcf5f307dd4150fd8f1c03f4512a6caeb84c9f09be1448711f5803373c58"},
+    {file = "python_stdnum-2.1.tar.gz", hash = "sha256:6b01645969eb3dfd55061a0114d593753cd9e653cea9083198b7eea12644397a"},
+]
+
+[package.extras]
+soap = ["zeep"]
+
+[[package]]
 name = "ruff"
 version = "0.12.9"
 description = "An extremely fast Python linter and code formatter, written in Rust."
@@ -815,4 +847,4 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.13"
-content-hash = "11a12238e451551518965b235b919775a4102410253ce2bca05c51e1cf99f87c"
+content-hash = "e207840e4e7606dbe54ccc1ca83d7ad19bc04de2d6a0feb964e11eae3cdfd877"

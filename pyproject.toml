@@ -14,6 +14,7 @@ gunicorn = "^23.0.0"
 sqlalchemy = "^2.0.43"
 alembic = "^1.16.4"
 loguru = "^0.7.3"
+pydentic = "^0.0.1.dev3"
 
 [tool.poetry.group.lint.dependencies]
 ruff = "^0.12.8"

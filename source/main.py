@@ -1,10 +1,7 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from loguru import logger
-
-
-
-app = FastAPI()
+from source.api import api_router
 
 
 @asynccontextmanager
@@ -18,8 +15,13 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title=settings.APP_NAME,
+    title="My API Framework",
     version="1.0.0",
     description="A production-ready FastAPI service template.",
     lifespan=lifespan
+)
+
+app.include_router(
+    prefix="/api",
+    router=api_router
 )
