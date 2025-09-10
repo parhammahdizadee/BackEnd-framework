@@ -12,6 +12,6 @@ im trying to implement whatever you want in a framework based on the latest tech
 
 
 
-1. create a venv enviroment using what ever package manager you want im using poetry
+1. create a venv enviroment using what ever package manager you want im using pip
 
 clone the project and user poetry install

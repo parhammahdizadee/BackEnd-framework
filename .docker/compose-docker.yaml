@@ -1,0 +1,43 @@
+services:
+  infra:
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
+    restart: unless-stopped
+    container_name: infra
+    expose:
+      - 8000
+    ports:
+      - 8000:8000
+    depends_on:
+      postgres-infra:
+        condition: service_healthy
+
+  postgres-infra:
+    container_name: postgres-infra
+    image: postgres:15.8-bookworm
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      PGDATA: /data/postgres
+    volumes:
+      - .postgres:/data/postgres
+      - .backup:/backup
+    expose:
+      - 5432
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  adminer-infra:
+    image: adminer:5.2.1-standalone
+    restart: always
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
