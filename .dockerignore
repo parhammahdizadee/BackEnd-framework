@@ -1,0 +1,53 @@
+# Ignore Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore venv
+.venv/
+env/
+
+# Ignore Git
+.git/
+.gitignore
+
+# Ignore Docker files
+Dockerfile
+.dockerignore
+
+# Ignore local DB/data
+*.db
+postgres_data/
+backup_data/
+
+# Ignore large IDE/project files
+.idea/
+.vscode/
+*.log
+
+# Ignore environment
+.env
+# Git and other version control
+.git
+.gitignore
+
+# Compiled files and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Dependencies managed by Poetry, pip, etc.
+.venv/
+env/
+venv/
+.poetry_cache/
+poetry.lock
+
+# Editor, IDE, and OS files
+.vscode/
+.idea/
+*.swp
+*.log
+.DS_Store
+Thumbs.db

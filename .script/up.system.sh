@@ -1,4 +1,4 @@
 
 echo "Starting services with docker-compose ..."
 
-docker compose up -d --build
+docker compose --file ".docker/compose-docker.yaml" --env-file "example.env" up -d --build
